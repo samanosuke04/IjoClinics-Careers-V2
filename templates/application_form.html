@@ -1,0 +1,30 @@
+<div class="container">
+  <h4 class="mt-4">Application Form</h4>
+  <form action="/job/{{job.id}}/apply" method="post">
+    <div class="mt-4">
+      <label >Full Name</label> <br>
+      <input type="text" name="full_name" placeholder="your full name here">
+    </div>
+    <div class="mt-4">
+      <label>Date of Birth</label> <br>
+      <input type="date" name="date_of_birth">
+    </div>
+    <style>
+      textarea {
+        width: 450px;
+        height: 150px;
+      }
+    </style>
+    <div class="address-area mt-4">
+      <label>Address</label> <br>
+      <textarea name="address" placeholder="your address here""></textarea>
+    </div>
+    <div class="mt-4">
+      <label>Resume file</label> <br>
+      <input type="text" name="resume_link" placeholder="upload your resume here in .pdf format">
+    </div>
+    <div class="mt-4">
+      <input type="submit" name="submit" value="Submit form">
+    </div>
+  </form>
+</div>

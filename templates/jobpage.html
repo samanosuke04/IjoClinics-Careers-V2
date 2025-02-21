@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{job.title}} at Ijo Clinic</title>
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <div class="container mt-4">
+      <h3>{{job.title}}</h3>
+      <p class="lead"> {{job.location}}</p>
+      <h4>Responsibilities</h4>
+      <ul>
+          {% for line in job.responsibilities.split(".") %}
+            <li>{{line}}</li>
+          {% endfor %}
+      </ul>
+      <h4>Requirements</h4>
+      <ol>
+          {% for line in job.requirements.split(".") %}
+            <li>{{line}}</li>
+          {% endfor %}
+      </ol>
+      <h4>Salary</h4>
+      <p>{{job.currency}} {{job.salary}}</p>
+    </div>
+    {% include 'application_form.html' %}
+    {% include 'footer.html' %}
+  </body>
